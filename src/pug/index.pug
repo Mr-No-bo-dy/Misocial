@@ -1,0 +1,58 @@
+include vars
+include mixins
+
+doctype html
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+      link(rel="stylesheet" href="css/styles.css")
+
+      title MISOCIAL
+   body 
+      .wrapper 
+         header 
+            .flex-between.menu 
+               .logo 
+                  a(href="index.html") 
+                     picture 
+                        img(src="img/logo.png" alt="logo")
+               nav.top-menu 
+                  ul.menu 
+                     +menu(headerMenu) 
+                  .cta 
+                     a(href="#") get started 
+            .header-title
+               p SOCIAL MARKETING & ANALYTICS
+               h1 Pricing Table
+               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut. 
+               .arrow 
+         main 
+            .main-title 
+               p MIsocial
+               h2 Select a Plan about  MIsocial? 
+               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+            .figures 
+               // Using func Figure
+               +figure(card.Free) 
+               +figure(card.Home) 
+               +figure(card.Premium) 
+            .control 
+               p SOCAL MARKETING & ANALYTICS
+               h2 Take control of your data
+               .flex-around 
+                  .cta 
+                     a(href="#") get started 
+                  .cta 
+                     a(href="#") explore features 
+         footer 
+            .flex-between.menu 
+               // Using func Menu
+               ul.menu 
+                  +menu (headerMenu) 
+            .copyright 
+               .flex-between 
+                  p &copy 2017 Mass Impressions & Tranmautritam. Make the right impression.
+                  .socials {Socials}
+                     // Here will be 4x svg icons
