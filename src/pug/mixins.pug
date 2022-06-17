@@ -1,22 +1,38 @@
+//- mixin menu (items) 
+//-    for item in items 
+//-       li 
+//-          a(href=item.url) #{item.name} 
+//-          //- a(href=item[1]) #{item[0]} 
+
 mixin menu (items) 
-   for item in items 
-      li 
-         a(href=item.url) #{item.name} 
-         //- a(href=item[1]) #{item[0]} 
+   .flex-between.menu 
+      .logo 
+         a(href="index.html") 
+            picture 
+               img(src="img/logo.png" alt="logo")
+      nav.top-menu 
+         ul.menu 
+            for item in items 
+               li 
+                  a(href=item.url) #{item.name} 
+         .cta.cta-narrow 
+            a(href="#") get started 
 
 mixin figure (item) 
    figure 
       figcaption 
          picture 
-            source(srcset=item.src + ".webp" type="image/webp")
-            source(srcset=item.src + ".png" type="image/png")
-            img(src=item.src + ".png" alt=item.alt)
-         p personal 
+            source(srcset=item.src + ".webp" type="image/webp") 
+            source(srcset=item.src + ".png" type="image/png") 
+            img(src=item.src + ".png" alt=item.alt) 
+         p 
+            b personal 
          p 
             sup $ 
             //- strong= item.price 
             strong #{item.price} 
-            |   /month 
+               //- sub /month
+            i   /month 
          p #{item.description}
          .cta 
             a(href=item.url) select plan 
