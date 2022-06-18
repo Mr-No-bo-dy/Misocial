@@ -16,15 +16,17 @@ ul
 
 .wrapper
    margin: 0 auto
-   padding: 0 15px
+   // padding: 0 15px
    max-width: 1920px
 
 header
+   padding: 50px
    // min-height: 770px
    background: url(../img/bg-header.png)
 
 .flex-between
    display: flex
+   align-items: center
    justify-content: space-between
    flex-wrap: wrap
    column-gap: 20px
@@ -34,26 +36,39 @@ header
    a
       +cta
 
-.top-menu
-   .cta
+.menu
+   a
       display: inline-block
-      a 
-         width: 150px
+      img
+         vertical-align: bottom
+      p
+         padding: 0 0 8px 15px
+         display: inline-block
+         font-weight: 700
+         font-size: 30px
+         line-height: 29px
+         letter-spacing: 6px
+         color: #fff
    ul
       display: inline-block
       li
          display: inline-block
          a
             display: inline-block
-            padding: 12px 20px
-            color: #ffffff
+            padding: 12px 27px
+            color: #fff
             font-weight: 500
             font-size: 16px
             line-height: 19px
             text-decoration: none
             border-bottom: 2px solid transparent
-         &:hover
-            border-bottom: 2px solid #fff
+            &:hover
+               border-bottom: 2px solid #fff
+   .cta
+      display: inline-block
+      a 
+         margin-left: 30px
+         width: 150px
 
 .header-title
    strong
@@ -72,6 +87,28 @@ header
       line-height: 28px
       color: #ffffff
       font-weight: 400
+   .arrow 
+      margin-top: 50px
+      display: inline-block
+      width: 64px
+      height: 64px
+      border-radius: 50%
+      background-color: #fff
+      border: 1px solid transparent
+      p 
+         display: inline-block
+         padding: 16px
+         font-size: 24px
+         color: #9fa3af
+         border-radius: 50%
+      &:hover 
+         background-color: #756edc
+         border: 1px solid white
+         p 
+            color: #fff
+
+.content 
+   padding: 120px 50px
 
 .main-title
    strong
@@ -97,7 +134,7 @@ header
       width: 440px
       height: 648px
       border-radius: 30px
-      background-color: #ffffff
+      background-color: #fff
       border: 1px solid #d7dbe8
       +cardShadow
    b
@@ -138,13 +175,13 @@ header
       font-size: 14px
       letter-spacing: 1px
       line-height: 32px
-      color: #ffffff
+      color: #fff
       font-weight: 700
    h2
       font-size: 60px
       letter-spacing: -2px
       line-height: 72px
-      color: #ffffff
+      color: #fff
       font-weight: 500
 
 .flex-center
@@ -154,12 +191,35 @@ header
    column-gap: 50px
    row-gap: 30px
 
+footer
+   padding: 50px 50px 0 50px
+   .menu
+      padding-bottom: 30px
+      p
+         color: #37374a
+      li
+         a
+            color: #37374a
+            &:hover
+               color: #756edc
+
 hr
    border: none
    border-top: 1px solid #f2f2f3
 
 .copyright
+   padding: 28px 0
    font-size: 14px
    line-height: 19px
    color: #6a6a77
    font-weight: 500
+
+.socials
+   a 
+      padding-left: 5px
+      display: inline-block
+      img
+         vertical-align: bottom
+         filter: grayscale(100%)
+         &:hover
+            filter: grayscale(0)

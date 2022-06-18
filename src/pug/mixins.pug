@@ -10,8 +10,9 @@ mixin menu (items)
          a(href="index.html") 
             picture 
                img(src="img/logo.png" alt="logo")
-      nav.top-menu 
-         ul.menu 
+            p MISOCIAL
+      nav 
+         ul 
             for item in items 
                li 
                   a(href=item.url) #{item.name} 
