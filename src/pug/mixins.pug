@@ -26,14 +26,14 @@ mixin figure (item)
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p 
-            b personal 
-         p 
-            sup $ 
+         p.type personal 
+         p.sup $ 
+         p.price 
+            //- sup $ 
             //- strong= item.price 
-            strong #{item.price} 
+            strong #{item.price}
                //- sub /month
-            i   /month 
-         p #{item.description}
+            i /month 
+         p.card-description #{item.description}
          .cta 
             a(href=item.url) select plan 

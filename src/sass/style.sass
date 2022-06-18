@@ -8,6 +8,8 @@ html
 
 body
    font-family: "Maven Pro", Arial, "Helvetica Neue", Helvetica, sans-serif
+   color: #fff
+   font-weight: 500
    text-align: center
 
 ul
@@ -22,7 +24,7 @@ ul
 header
    padding: 50px
    // min-height: 770px
-   background: url(../img/bg-header.png)
+   background: url(../img/bg-header.png) no-repeat
 
 .flex-between
    display: flex
@@ -32,9 +34,19 @@ header
    column-gap: 20px
    row-gap: 20px
 
+.flex-center
+   display: flex
+   justify-content: center
+   flex-wrap: wrap
+   column-gap: 50px
+   row-gap: 30px
+
 .cta>
    a
-      +cta
+      +ctaStyle
+
+strong
+   text-transform: uppercase
 
 .menu
    a
@@ -42,13 +54,13 @@ header
       img
          vertical-align: bottom
       p
-         padding: 0 0 8px 15px
+         padding: 0 0 10px 15px
          display: inline-block
+         color: #fff
          font-weight: 700
          font-size: 30px
          line-height: 29px
          letter-spacing: 6px
-         color: #fff
    ul
       display: inline-block
       li
@@ -66,130 +78,99 @@ header
                border-bottom: 2px solid #fff
    .cta
       display: inline-block
-      a 
+      a
          margin-left: 30px
          width: 150px
 
 .header-title
+   padding: 175px 0
    strong
-      font-size: 14px
-      letter-spacing: 1px
-      line-height: 32px
-      color: #ffffff
+      color: #fff
       font-weight: 700
+      font-size: 14px
+      line-height: 32px
+      letter-spacing: 1px
    h1
+      margin: 0 0 10px
+      color: #fff
+      font-weight: 500
       font-size: 86px
       letter-spacing: -3px
-      color: #ffffff
-      font-weight: 500
-   p
+   p.header-description
+      display: inline-block
+      max-width: 380px
+      color: #fff
+      font-weight: 400
       font-size: 16px
       line-height: 28px
-      color: #ffffff
-      font-weight: 400
-   .arrow 
-      margin-top: 50px
-      display: inline-block
-      width: 64px
-      height: 64px
-      border-radius: 50%
-      background-color: #fff
-      border: 1px solid transparent
-      p 
-         display: inline-block
-         padding: 16px
-         font-size: 24px
-         color: #9fa3af
-         border-radius: 50%
-      &:hover 
-         background-color: #756edc
-         border: 1px solid white
-         p 
-            color: #fff
 
-.content 
+.arrow
+   display: inline-block
+   width: 62px
+   height: 62px
+   background-color: #fff
+   border-radius: 50%
+   border: 1px solid transparent
+   p
+      display: inline-block
+      padding: 14px
+      color: #9fa3af
+      font-size: 24px
+      border-radius: 50%
+   &:hover
+      background-color: #756edc
+      border: 1px solid white
+      p
+         color: #fff
+
+.content
    padding: 120px 50px
 
 .main-title
    strong
-      font-size: 14px
-      letter-spacing: 1px
-      line-height: 32px
       color: #9fa4af
       font-weight: 700
+      font-size: 14px
+      line-height: 32px
+      letter-spacing: 1px
    h2
-      font-size: 60px
-      letter-spacing: -2px
-      line-height: 72px
       color: #4f4f6f
       font-weight: 500
-   p
-      font-size: 16px
-      line-height: 28px
+      font-size: 60px
+      line-height: 72px
+      letter-spacing: -2px
+   p.main-description
+      display: inline-block
+      max-width: 380px
       color: #9fa4af
       font-weight: 400
+      font-size: 16px
+      line-height: 28px
 
 .figures
+   padding-top: 100px
    figure
-      width: 440px
-      height: 648px
-      border-radius: 30px
-      background-color: #fff
-      border: 1px solid #d7dbe8
-      +cardShadow
-   b
-      font-size: 14px
-      letter-spacing: 1px
-      line-height: 32px
-      color: #9fa4af
-      font-weight: 700
-   p
-      font-size: 16px
-      line-height: 28px
-      color: #9fa4af
-      font-weight: 400
-      sup
-         font-size: 16px
-         letter-spacing: -1px
-         line-height: 51px
-         color: #4f4f6f
-         font-weight: 500
-      strong
-         font-size: 60px
-         letter-spacing: -2px
-         line-height: 72px
-         color: #4f4f6f
-         font-weight: 500
-      i
-         color: #4f4f6f
-         font-style: normal
-   .cta
-      a
-         +ctaShadow
-      // &:hover
-      //    filter: none
+      +cardStyle
+      &:hover
+         border: 1px solid transparent
+         +cardShadow
 
 .control
-   background: url(../img/bg-control.png)
+   padding: 170px 0 185px
+   background: url(../img/bg-control.png) no-repeat
    strong
-      font-size: 14px
-      letter-spacing: 1px
-      line-height: 32px
       color: #fff
       font-weight: 700
+      font-size: 14px
+      line-height: 32px
+      letter-spacing: 1px
    h2
-      font-size: 60px
-      letter-spacing: -2px
-      line-height: 72px
+      margin: 0 0 15px
       color: #fff
       font-weight: 500
-
-.flex-center
-   display: flex
-   justify-content: center
-   flex-wrap: wrap
-   column-gap: 50px
-   row-gap: 30px
+      font-size: 60px
+      line-height: 72px
+      letter-spacing: -2px
 
 footer
    padding: 50px 50px 0 50px
@@ -202,6 +183,14 @@ footer
             color: #37374a
             &:hover
                color: #756edc
+      .cta 
+         a 
+            color: #fff
+            background-color: #6e45e2
+            &:hover
+               color: #c2c9db
+               background-color: #fff               
+               border: 1px solid #d7dbe8
 
 hr
    border: none
@@ -209,17 +198,16 @@ hr
 
 .copyright
    padding: 28px 0
-   font-size: 14px
-   line-height: 19px
    color: #6a6a77
    font-weight: 500
-
-.socials
-   a 
-      padding-left: 5px
-      display: inline-block
-      img
-         vertical-align: bottom
-         filter: grayscale(100%)
-         &:hover
-            filter: grayscale(0)
+   font-size: 14px
+   line-height: 19px
+   .socials
+      a
+         padding-left: 5px
+         display: inline-block
+         img
+            vertical-align: bottom
+            filter: grayscale(100%)
+            &:hover
+               filter: grayscale(0)
