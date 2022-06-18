@@ -1,3 +1,4 @@
+// $size: 1145
 // $lightText: #fff
 // $lightBackground: #fff
 
@@ -11,6 +12,10 @@
 //    @else
 //       background-color: $darkBackground
 //       color: $darkText
+
+=media ($size)
+   @media screen and (min-width: #{$size}px)
+      @content
 
 =ctaStyle ($light:true)
    display: inline-block
@@ -91,12 +96,6 @@
       line-height: 28px
    .cta
       a
-         +ctaShadow
-      // &:hover
-      //    filter: none
-
-=ctaShadow 
-   filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
-
-=cardShadow
-   filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+         box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+         &:hover
+            box-shadow: none

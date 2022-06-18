@@ -18,21 +18,25 @@ ul
 
 .wrapper
    margin: 0 auto
-   // padding: 0 15px
+   padding: 0 15px
    max-width: 1920px
+   +media(1280)
+      padding: 0
 
 header
    padding: 50px
    // min-height: 770px
-   background: url(../img/bg-header.png) no-repeat
+   background: url(../img/bg-header.png) no-repeat center/cover
 
 .flex-between
    display: flex
    align-items: center
-   justify-content: space-between
+   justify-content: space-around
    flex-wrap: wrap
    column-gap: 20px
    row-gap: 20px
+   +media(651)
+      justify-content: space-between
 
 .flex-center
    display: flex
@@ -40,6 +44,45 @@ header
    flex-wrap: wrap
    column-gap: 50px
    row-gap: 30px
+
+.menu 
+   ul.nav 
+      display: none
+      +media(1175)
+         display: inline-block
+
+.hamburger 
+   display: inline-block
+   position: relative
+   vertical-align: middle
+   padding: 5px
+   margin: 0 10px
+   width: 40px
+   height: 30px
+   +media(1175)
+      display: none
+   span, 
+   span:before, 
+   span:after 
+      content: ""
+      position: absolute
+      width: 40px
+      height: 2px
+      top: calc(50% - 2px)
+      left: 5px
+      background-color: #fff
+      border-radius: 2px
+   span:before 
+      top: -10px
+      left: 0
+   span:after 
+      top: 10px
+      left: 0
+   &:hover span,
+   &:hover span:before,
+   &:hover span:after 
+      cursor: pointer
+      background-color: #6e45e2
 
 .cta>
    a
@@ -76,14 +119,16 @@ strong
             border-bottom: 2px solid transparent
             &:hover
                border-bottom: 2px solid #fff
-   .cta
+   .cta-narrow
       display: inline-block
+      margin-left: 30px
       a
-         margin-left: 30px
          width: 150px
 
 .header-title
-   padding: 175px 0
+   padding: 140px 0
+   +media(681)
+      padding: 175px 0
    strong
       color: #fff
       font-weight: 700
@@ -153,11 +198,11 @@ strong
       +cardStyle
       &:hover
          border: 1px solid transparent
-         +cardShadow
+         box-shadow: 0 0 46px rgba(204,204,223,0.71)
 
 .control
-   padding: 170px 0 185px
-   background: url(../img/bg-control.png) no-repeat
+   padding: 170px 15px 185px
+   background: url(../img/bg-control.png) no-repeat center/cover
    strong
       color: #fff
       font-weight: 700
@@ -191,10 +236,16 @@ footer
                color: #c2c9db
                background-color: #fff               
                border: 1px solid #d7dbe8
-
-hr
-   border: none
-   border-top: 1px solid #f2f2f3
+      .hamburger
+         span, span:before, span:after 
+            background-color: #37374a
+         &:hover span,
+         &:hover span:before,
+         &:hover span:after 
+            background-color: #6e45e2
+      hr
+         border: none
+         border-top: 1px solid #f2f2f3
 
 .copyright
    padding: 28px 0
@@ -202,6 +253,10 @@ hr
    font-weight: 500
    font-size: 14px
    line-height: 19px
+   .flex-between
+      justify-content: space-around
+      +media(729)
+         justify-content: space-between
    .socials
       a
          padding-left: 5px
