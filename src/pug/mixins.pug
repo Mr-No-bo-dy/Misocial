@@ -1,9 +1,3 @@
-//- mixin menu (items) 
-//-    for item in items 
-//-       li 
-//-          a(href=item.url) #{item.name} 
-//-          //- a(href=item[1]) #{item[0]} 
-
 mixin menu (items) 
    .flex-between.menu 
       .logo 
@@ -19,6 +13,7 @@ mixin menu (items)
             for item in items 
                li 
                   a(href=item.url) #{item.name} 
+                  //- a(href=item[1]) #{item[0]} 
          .cta.cta-narrow 
             a(href="#") get started 
 
@@ -32,10 +27,8 @@ mixin figure (item)
          p.type personal 
          p.sup $ 
          p.price 
-            //- sup $ 
             //- strong= item.price 
             strong #{item.price}
-               //- sub /month
             i /month 
          p.card-description #{item.description}
          .cta 
