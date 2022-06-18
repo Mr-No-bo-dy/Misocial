@@ -1,23 +1,8 @@
-// $size: 1145
-// $lightText: #fff
-// $lightBackground: #fff
-
-// $darkText: #c2c9db
-// $darkBackground: #6e45e2
-
-// =cta ($light:true)
-//    @if light
-//       background-color: $lightBackground
-//       color: $lightText
-//    @else
-//       background-color: $darkBackground
-//       color: $darkText
-
 =media ($size)
    @media screen and (min-width: #{$size}px)
       @content
 
-=ctaStyle ($light:true)
+=ctaStyle ($light:false)
    display: inline-block
    padding: 17px
    width: 190px
@@ -33,7 +18,7 @@
    border: 1px solid #d7dbe8
    &:hover 
       border: 1px solid transparent
-   @if light
+   @if $light
       color: #c2c9db
       background-color: #fff
       &:hover

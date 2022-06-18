@@ -1,9 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25">
-	<title>ico-tw-svg</title>
-	<defs>
-		<image width="14" height="12" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMBAMAAACgrpHpAAAAAXNSR0IB2cksfwAAADBQTFRFAAAAaWl2amp4amp1a2t2cHBwamp3amp3aWl3amp3bGx4amp4aGh4amp3amp3amp375gmzQAAABB0Uk5TAFCAMHAQn/+/30BgIO/PrytZxOkAAABXSURBVHicY2AAAiEDBgZXBga28rJWhs4FDNvLy2cxpJcJqJeXb2BYWQ4CCxjSwXQAw1kQVcfAwHIdSFczMDCD6AdAQ86Xl9cGMDCsBipsBXLNpldmASkAfJQegFbrmzUAAAAASUVORK5CYII="/>
-	</defs>
-	<style>
-	</style>
-	<use id="img1" href="#img1" transform="matrix(1,0,0,1,6,6)"/>
-</svg>

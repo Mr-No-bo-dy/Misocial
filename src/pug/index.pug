@@ -1,5 +1,6 @@
 include vars
 include mixins
+include sprites
 
 doctype html
 html(lang="en")
@@ -51,11 +52,27 @@ html(lang="en")
                .flex-between 
                   p &copy; 2017 Mass Impressions & Tranmautritam. Make the right impression.
                   .socials 
+                     //- a(href="#") 
+                     //-    img(src="img/ico-facebook.svg" alt="facebook")
+                     //- a(href="#") 
+                     //-    img(src="img/ico-twitter.svg" alt="twitter")
+                     //- a(href="#") 
+                     //-    img(src="img/ico-google.svg" alt="google")
+                     //- a(href="#") 
+                     //-    img(src="img/ico-instagram.svg" alt="instagram")
                      a(href="#") 
-                        img(src="img/ico-fb.png" alt="facebook")
+                        <svg>
+                           <use xlink:href="#fb">
+                        </svg>
                      a(href="#") 
-                        img(src="img/ico-tw.png" alt="twitter")
+                        <svg>
+                           <use xlink:href="#tw">
+                        </svg>
                      a(href="#") 
-                        img(src="img/ico-g+.png" alt="google")
+                        <svg>
+                           <use xlink:href="#go">
+                        </svg>
                      a(href="#") 
-                        img(src="img/ico-ins.png" alt="instagram")
+                        <svg>
+                           <use xlink:href="#ins">
+                        </svg>

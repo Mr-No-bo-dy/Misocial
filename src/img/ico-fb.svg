@@ -1,9 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25">
-	<title>ico-fb-svg</title>
-	<defs>
-		<image width="8" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAQBAMAAADZpCNOAAAAAXNSR0IB2cksfwAAACdQTFRFAAAAcHBwaWl3aWl3amp3amp3a2t2amp3amp1bGx4amp3amp4aGh4g8Ee4gAAAA10Uk5TABCPv8//cO8wQJ+AIPxskK8AAAA2SURBVHicY2BgVDZiYBAJDWZgSA0HslQjGBgYTAMYGGa6Rs5gCA0NjQIR0SDuHIgEbqJzAgMAJuENjw82sUYAAAAASUVORK5CYII="/>
-	</defs>
-	<style>
-	</style>
-	<use id="img1" href="#img1" transform="matrix(1,0,0,1,8,4)"/>
-</svg>
