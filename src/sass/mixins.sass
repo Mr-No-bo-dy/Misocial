@@ -2,40 +2,51 @@
    @media screen and (min-width: #{$size}px)
       @content
 
-=ctaStyle ($light:false)
+=scale 
+   transform: scale(.8)
+   +media (768)
+      transform: scale(1)
+
+=ctaStyle ($header:false, $footer:false)
    display: inline-block
    padding: 17px
    width: 190px
-   // height: 50px
    box-sizing: border-box
    font-weight: 700
    font-size: 12px
    letter-spacing: 1px
-   // line-height: 32px
    text-transform: uppercase
    text-decoration: none
    border-radius: 25px
+   color: #c2c9db
    border: 1px solid #d7dbe8
+   background-color: #fff
    &:hover 
+      color: #fff
       border: 1px solid transparent
-   @if $light
-      color: #c2c9db
-      background-color: #fff
+      background-color: #6e45e2
+   @if $header
+      width: 150px
+      color: #fff
+      border: 1px solid #fff
+      background-color: transparent
       &:hover
-         color: #fff
          background-color: #6e45e2
-   @else 
+   @if $footer 
+      width: 150px
       color: #fff
       background-color: #6e45e2
-      &:hover
-         color: #c2c9db
+      &:hover 
+         color: #6e45e2
+         border: 1px solid #6e45e2
          background-color: #fff
-         border: 1px solid #d7dbe8
 
 =cardStyle 
-   padding: 60px 72px 65px
-   width: 440px
-   height: 648px
+   +media(1920)
+      padding: 60px 72px 65px
+   padding: 4vw
+   max-width: 440px
+   max-height: 650px
    box-sizing: border-box
    border-radius: 30px
    background-color: #fff
@@ -59,9 +70,12 @@
       font-weight: 500
       font-size: 16px
       line-height: 51px
-      // letter-spacing: -1px
+      letter-spacing: -8px
+      +media(768)
+         letter-spacing: 0
    p.price 
       display: inline-block
+      +scale
       strong
          color: #4f4f6f
          font-weight: 500
@@ -74,13 +88,30 @@
          font-size: 16px
          font-style: normal
    p.card-description 
-      margin: 30px 0 45px
+      +media(1920)
+         margin: 30px 0 45px
+      margin: 2vw 0 2vw
       color: #9fa4af
       font-weight: 400
       font-size: 16px
       line-height: 28px
-   .cta
-      a
-         box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
-         &:hover
-            box-shadow: none
+   a
+      box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+      &:hover
+         box-shadow: none
+
+=horizontalLines($white:true)
+   position: relative
+   &::before, &::after
+      position: absolute
+      content: ""
+      top: 7px
+      width: 25px
+      @if $white
+         border-top: 1px solid #fff
+      @else
+         border-top: 1px solid #6e45e2
+   &::before
+      left: -35px
+   &::after
+      right: -35px
