@@ -1,5 +1,29 @@
 @import mixins
 
+@font-face
+   font-family: "Maven Pro"
+   src: url('../fonts/MavenPro-Regular.woff2') format('woff2')
+   src: url('../fonts/MavenPro-Regular.woff') format('woff')
+   font-weight: normal
+   font-style: normal
+   font-display: swap
+
+@font-face
+   font-family: "Maven Pro"
+   src: url('../fonts/MavenPro-Medium.woff2') format('woff2')
+   src: url('../fonts/MavenPro-Medium.woff') format('woff')
+   font-weight: 500
+   font-style: normal
+   font-display: swap
+
+@font-face
+   font-family: "Maven Pro"
+   src: url('../fonts/MavenPro-Bold.woff2') format('woff2')
+   src: url('../fonts/MavenPro-Bold.woff') format('woff')
+   font-weight: bold
+   font-style: normal
+   font-display: swap
+
 *
    margin: 0
 
@@ -12,7 +36,7 @@ body
    font-weight: 500
    text-align: center
 
-.sprite 
+.sprite
    display: none
 
 ul
@@ -31,6 +55,7 @@ header
    +media (768)
       padding: 50px
    background: linear-gradient(-60deg, rgba(135, 211, 205, .75) 0%, rgba(109, 69, 225, .75) 100%), url(../img/bg-header.jpg) no-repeat center/cover
+   // //- Alternative
    // position: relative
    // background: url(../img/bg-header+.jpg) no-repeat center/cover
    // &::before
@@ -43,8 +68,8 @@ header
    //    z-index: -1
    //    background: linear-gradient(-60deg, rgba(135, 211, 205, 1) 0%, rgba(109, 69, 225, 1) 100%)
    //    mix-blend-mode: screen
-   .cta 
-      a 
+   .cta
+      a
          +ctaStyle($header:true)
 
 .flex-between
@@ -66,13 +91,13 @@ header
       column-gap: 50px
    row-gap: 30px
 
-.menu 
-   ul.nav 
+.menu
+   ul.nav
       display: none
       +media(1175)
          display: inline-block
 
-.hamburger 
+.hamburger
    display: inline-block
    position: relative
    vertical-align: middle
@@ -84,9 +109,9 @@ header
    height: 30px
    +media(1175)
       display: none
-   span, 
-   span:before, 
-   span:after 
+   span,
+   span:before,
+   span:after
       content: ""
       position: absolute
       width: 40px
@@ -95,15 +120,15 @@ header
       left: 5px
       background-color: #fff
       border-radius: 2px
-   span:before 
+   span:before
       top: -10px
       left: 0
-   span:after 
+   span:after
       top: 10px
       left: 0
    &:hover span,
    &:hover span:before,
-   &:hover span:after 
+   &:hover span:after
       cursor: pointer
       background-color: #6e45e2
 
@@ -149,7 +174,12 @@ strong
       +media(380)
          margin-left: 30px
 
-.logo 
+header
+   .logo
+      a:hover p
+         color: #37374a
+
+.logo
    a:hover p
       color: #6e45e2
 
@@ -205,7 +235,7 @@ strong
    padding: 9vw 20px
    +media (768)
       padding: 9vw 50px
-   +media(1920)
+   +media(1440)
       padding: 120px 50px
 
 .main-title
@@ -233,7 +263,7 @@ strong
 
 .figures
    padding-top: 8vw
-   +media(1920)
+   +media(1440)
       padding-top: 100px
    // +scale
    figure
@@ -246,7 +276,7 @@ strong
    padding: 13vw 20px 13vw
    +media (768)
       padding: 13vw 50px 13vw
-   +media(1920)
+   +media(1440)
       padding: 170px 50px 185px
    background: url(../img/bg-control.jpg) no-repeat center/cover
    strong
@@ -279,15 +309,15 @@ footer
             color: #37374a
             &:hover
                color: #756edc
-      .cta 
-         a 
+      .cta
+         a
             +ctaStyle($footer:true)
       .hamburger
-         span, span:before, span:after 
+         span, span:before, span:after
             background-color: #37374a
          &:hover span,
          &:hover span:before,
-         &:hover span:after 
+         &:hover span:after
             background-color: #6e45e2
 
 hr

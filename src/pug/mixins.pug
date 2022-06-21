@@ -13,7 +13,8 @@ mixin menu (items)
             for item in items 
                li 
                   a(href=item.url) #{item.name} 
-                  //- a(href=item[1]) #{item[0]} 
+                  //- //- Alternative(indexes)
+                  //- a(href=item[1]) #{item[0]}
          .cta.cta-narrow 
             a(href="#") get started 
 
@@ -27,8 +28,9 @@ mixin figure (item)
          p.type personal 
          p.sup $ 
          p.price 
-            //- strong= item.price 
             strong #{item.price}
+            //- //- Alternative
+            //- strong= item.price
             i /month 
          p.card-description #{item.description}
          .cta 
