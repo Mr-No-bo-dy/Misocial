@@ -19,19 +19,19 @@ mixin menu (items)
             a(href="#") get started 
 
 mixin figure (item) 
-   figure 
+   figure.card 
       figcaption 
          picture 
             source(srcset=item.src + ".webp" type="image/webp") 
             source(srcset=item.src + ".png" type="image/png") 
             img(src=item.src + ".png" alt=item.alt) 
-         p.type personal 
+         p.type 
+            strong personal 
          p.sup $ 
-         p.price 
-            strong #{item.price}
+         h2 #{item.price}
             //- //- Alternative
-            //- strong= item.price
-            i /month 
-         p.card-description #{item.description}
+            //- h2= item.price
+            i.term /month 
+         p.description #{item.description}
          .cta 
             a(href=item.url) select plan 

@@ -28,12 +28,12 @@
    margin: 0
 
 html
-   font-size: 10px
+   font-size: 9px
+   +media(768)
+      font-size: 10px
 
 body
-   color: #fff
    font-family: "Maven Pro", Arial, "Helvetica Neue", Helvetica, sans-serif
-   font-weight: 500
    text-align: center
 
 .sprite
@@ -76,20 +76,22 @@ header
    display: flex
    align-items: center
    justify-content: space-around
+   +media(577)
+      justify-content: space-between
    flex-wrap: wrap
    column-gap: 20px
    row-gap: 20px
-   +media(651)
-      justify-content: space-between
 
 .flex-center
    display: flex
    justify-content: center
    flex-wrap: wrap
-   column-gap: 20px
-   +media (1060)
+   column-gap: 30px
+   +media (1025)
       column-gap: 50px
    row-gap: 30px
+   +media (1025)
+      row-gap: 50px
 
 .menu
    ul.nav
@@ -99,16 +101,16 @@ header
 
 .hamburger
    display: inline-block
+   +media(1175)
+      display: none
    position: relative
    vertical-align: middle
-   padding: 5px
    margin: 10px 20px
    +media(380)
       margin: 0 10px
+   padding: 5px
    width: 40px
    height: 30px
-   +media(1175)
-      display: none
    span,
    span:before,
    span:after
@@ -145,14 +147,13 @@ strong
       img
          vertical-align: bottom
       p
-         padding: 0 0 10px 10px
+         padding: 0 0 5px 10px
          +media(380)
-            padding: 0 0 10px 15px
+            padding: 0 0 7px 15px
          display: inline-block
          color: #fff
          font-weight: 700
-         font-size: 30px
-         line-height: 29px
+         font-size: 3.0rem
          letter-spacing: 6px
    ul
       display: inline-block
@@ -162,9 +163,9 @@ strong
             display: inline-block
             padding: 12px 27px
             color: #fff
-            font-weight: 500
-            font-size: 16px
-            line-height: 19px
+            font-weight: 500z
+            font-size: 1.6rem
+            line-height: 1.19em
             text-decoration: none
             border-bottom: 2px solid transparent
             &:hover
@@ -188,29 +189,14 @@ header
    +media(1280)
       padding: 175px 0
    strong
-      color: #fff
-      font-weight: 700
-      font-size: 14px
-      line-height: 32px
-      letter-spacing: 0
-      +media(425)
-         letter-spacing: 1px
       +horizontalLines()
-
    h1
       margin: 0 0 10px
       color: #fff
       font-weight: 500
-      font-size: 86px
+      font-size: 8.6rem
       letter-spacing: -3px
       +scale
-   p.header-description
-      margin: 0 auto
-      max-width: 380px
-      color: #fff
-      font-weight: 400
-      font-size: 16px
-      line-height: 28px
 
 .arrow
    display: inline-block
@@ -223,7 +209,7 @@ header
       display: inline-block
       padding: 14px
       color: #9fa3af
-      font-size: 24px
+      font-size: 2.4rem
       border-radius: 50%
    &:hover
       background-color: #756edc
@@ -233,33 +219,41 @@ header
 
 .content
    padding: 9vw 20px
-   +media (768)
+   +media (1025)
       padding: 9vw 50px
-   +media(1440)
+   +media(1280)
       padding: 120px 50px
+
+.header-title,
+.main-title,
+.card,
+.control
+   color: #fff
+   strong
+      font-size: 1.4rem
+      line-height: 2.29em
+      letter-spacing: 1px
+   h2
+      font-weight: 500
+      font-size: 6.0rem
+      line-height: 1.2em
+      letter-spacing: -2px
+      +scale
+   .description
+      margin: 0 auto
+      max-width: 380px
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.75em
 
 .main-title
    strong
       color: #9fa4af
-      font-weight: 700
-      font-size: 14px
-      line-height: 32px
-      letter-spacing: 1px
       +horizontalLines($white:false)
    h2
       color: #4f4f6f
-      font-weight: 500
-      font-size: 60px
-      line-height: 72px
-      letter-spacing: -2px
-      +scale
-   p.main-description
-      margin: 0 auto
-      max-width: 380px
+   p.description
       color: #9fa4af
-      font-weight: 400
-      font-size: 16px
-      line-height: 28px
 
 .figures
    padding-top: 8vw
@@ -279,20 +273,8 @@ header
    +media(1440)
       padding: 170px 50px 185px
    background: url(../img/bg-control.jpg) no-repeat center/cover
-   strong
-      color: #fff
-      font-weight: 700
-      font-size: 14px
-      line-height: 32px
-      letter-spacing: 1px
    h2
       margin: 0 0 15px
-      color: #fff
-      font-weight: 500
-      font-size: 60px
-      line-height: 72px
-      letter-spacing: -2px
-      +scale
 
 footer
    padding: 0 20px
@@ -328,8 +310,8 @@ hr
    padding: 28px 0
    color: #6a6a77
    font-weight: 500
-   font-size: 14px
-   line-height: 19px
+   font-size: 1.4rem
+   line-height: 1.36em
    .flex-between
       justify-content: space-around
       +media(729)

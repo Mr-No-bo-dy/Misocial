@@ -3,7 +3,7 @@
       @content
 
 =scale 
-   transform: scale(.8)
+   transform: scale(.9)
    +media (768)
       transform: scale(1)
 
@@ -13,7 +13,7 @@
    width: 190px
    box-sizing: border-box
    font-weight: 700
-   font-size: 12px
+   font-size: 1.2rem
    letter-spacing: 1px
    text-transform: uppercase
    text-decoration: none
@@ -60,45 +60,29 @@
    p.type 
       margin-top: 35px
       color: #9fa4af
-      font-weight: 700
-      font-size: 14px
-      line-height: 32px
-      letter-spacing: 1px
-      text-transform: uppercase
    p.sup 
       display: inline-block
       vertical-align: top
       color: #4f4f6f
       font-weight: 500
-      font-size: 16px
-      line-height: 51px
-      letter-spacing: -8px
-      +media(768)
-         letter-spacing: 0
-   p.price 
+      font-size: 1.6rem
+      line-height: 3.19em
+      letter-spacing: 0
+   h2 
       display: inline-block
-      +scale
-      strong
-         color: #4f4f6f
-         font-weight: 500
-         font-size: 60px
-         line-height: 72px
-         letter-spacing: -2px
-      i
-         color: #4f4f6f
-         font-weight: 500
-         font-size: 16px
+      color: #4f4f6f
+      transform: scale(1)
+      i.term
+         font-size: 0.27em
          font-style: normal
-   p.card-description 
-      margin: 15px 0
+         letter-spacing: 0
+   p.description 
+      margin: 5px 0 15px
       +media(425)
-         margin: 2vw 0
+         margin: 1vw 0 3vw
       +media(1440)
-         margin: 30px 0 45px
+         margin: 15px 0 45px
       color: #9fa4af
-      font-weight: 400
-      font-size: 16px
-      line-height: 28px
    a
       box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
       &:hover
