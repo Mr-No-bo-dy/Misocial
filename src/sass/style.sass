@@ -42,9 +42,7 @@ ul
 
 .wrapper
    margin: 0 auto
-   padding: 0 15px
-   +media(1280)
-      padding: 0
+   padding: 0
    max-width: 1920px
 
 header
@@ -165,6 +163,7 @@ strong
          border-bottom: 2px solid transparent
          &:hover
             border-bottom: 2px solid #fff
+            transform: transition
    .cta-narrow
       display: inline-block
       +media(380)
@@ -200,17 +199,6 @@ header
    background-color: #fff
    border-radius: 50%
    border: 1px solid transparent
-   // p
-   //    display: inline-block
-   //    padding: 14px
-   //    color: #9fa3af
-   //    font-size: 2.4rem
-   //    border-radius: 50%
-   // &:hover
-   //    background-color: #756edc
-   //    border: 1px solid white
-   //    p
-   //       color: #fff
    .div-arrow
       display: inline-block
       position: relative
@@ -279,7 +267,6 @@ header
    padding-top: 8vw
    +media(1440)
       padding-top: 100px
-   // +scale
    figure
       +cardStyle
       &:hover
@@ -287,6 +274,9 @@ header
          box-shadow: 0 0 46px rgba(204,204,223,0.71)
 
 .control
+   .flex-center
+      column-gap: 10px
+      row-gap: 15px
    padding: 13vw 20px 13vw
    +media (768)
       padding: 13vw 50px 13vw
