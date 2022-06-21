@@ -28,8 +28,10 @@ html
    font-size: 9px
    +media(768)
       font-size: 10px
+   scroll-behavior: smooth
 
 body
+   scroll-behavior: smooth
    font-family: "Maven Pro", Arial, "Helvetica Neue", Helvetica, sans-serif
    text-align: center
 
@@ -163,7 +165,7 @@ strong
          border-bottom: 2px solid transparent
          &:hover
             border-bottom: 2px solid #fff
-            transform: transition
+            transition: all 1s ease
    .cta-narrow
       display: inline-block
       +media(380)
