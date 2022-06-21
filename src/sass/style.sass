@@ -205,17 +205,42 @@ header
    background-color: #fff
    border-radius: 50%
    border: 1px solid transparent
-   p
+   // p
+   //    display: inline-block
+   //    padding: 14px
+   //    color: #9fa3af
+   //    font-size: 2.4rem
+   //    border-radius: 50%
+   // &:hover
+   //    background-color: #756edc
+   //    border: 1px solid white
+   //    p
+   //       color: #fff
+   .div-arrow
       display: inline-block
-      padding: 14px
-      color: #9fa3af
-      font-size: 2.4rem
-      border-radius: 50%
+      position: relative
+      margin-top: 27px
+      width: 8px
+      height: 8px
+      border-bottom: 1px solid #9fa3af
+      border-right: 1px solid #9fa3af
+      transform: rotate(45deg)
+      &::after
+         position: absolute
+         content: ""
+         top: -4px
+         left: 3px
+         height: 15px
+         width: 1px
+         background-color: #9fa3af
+         transform: rotate(-45deg)
    &:hover
       background-color: #756edc
       border: 1px solid white
-      p
-         color: #fff
+      .div-arrow
+         border-color: #fff
+         &::after
+            background-color: #fff
 
 .content
    padding: 9vw 20px
