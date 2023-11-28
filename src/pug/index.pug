@@ -14,17 +14,18 @@ html(lang="en")
       title MISOCIAL - Lorem ipsum dolor sit amet, consectetur adipisicing
 
    body 
-      .wrapper 
-         header 
+      header 
+         .wrapper 
             +menu(navMenu) 
             .header-title
                p 
-                  strong SOCIAL MARKETING & ANALYTICS
+                  strong SOCIAL MARKETING &amp; ANALYTICS
                h1 Pricing Table
                p.description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
             a(class="arrow" href="#main") 
                .div-arrow
-         main#main 
+      main#main 
+         .wrapper 
             .content 
                .main-title 
                   p 
@@ -35,21 +36,23 @@ html(lang="en")
                   +figure(card.Free) 
                   +figure(card.Home) 
                   +figure(card.Premium) 
-            .control 
+         .control#control 
+            .wrapper 
                p 
-                  strong SOCAL MARKETING & ANALYTICS
+                  strong SOCAL MARKETING &amp; ANALYTICS
                h2 Take control of your data
                .flex-center 
                   .cta 
                      a(href="#") get started 
                   .cta 
                      a(href="#") explore features 
-         footer 
+      footer 
+         .wrapper 
             +menu (navMenu) 
             hr
             .copyright 
                .flex-between 
-                  p &copy; 2017 Mass Impressions & Tranmautritam. Make the right impression.
+                  p &copy; 2017 Mass Impressions &amp; Tranmautritam. Make the right impression.
                   .socials 
                      a(href="#") 
                         <svg>
